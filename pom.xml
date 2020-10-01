@@ -76,8 +76,7 @@
 		</build>
 	</profile>
     <profile>
-        <profiles>
-  	<profile>
+	<profile>
 		<id>component-tests</id>
 		<build>
 			<plugins>
@@ -107,7 +106,6 @@
 			</plugins>
 		</build>
 	</profile>
-    <profile>
 </profiles>
 
   <properties>
