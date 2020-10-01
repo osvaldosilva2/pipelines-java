@@ -1,4 +1,4 @@
-package com.convio.global.test.annotations;
+package com.microsoft.test.annotations;
 
 public interface SmokeTest {
 }
