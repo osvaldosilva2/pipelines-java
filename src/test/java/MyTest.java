@@ -9,8 +9,4 @@ public class MyTest {
         Demo d = new Demo();
         d.DoSomething(true);
     }
-
-    @Test
-    public void test_method_2() {
-    }
 }
