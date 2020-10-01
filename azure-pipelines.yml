@@ -13,6 +13,7 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
+    options: '-DskipTests=true -Psmoke-tests'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
