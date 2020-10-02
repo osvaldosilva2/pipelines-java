@@ -8,11 +8,8 @@ trigger:
 
 resources:
   pipelines:
-  - pipeline: componentTest  # Name of the pipeline resource
-    source: pipeline_componentTest # Name of the triggering pipeline
-    trigger: 
-      branches:
-      - master
+  - pipeline: componentTest
+    source: pipeline_componentTest
 
 pool:
   vmImage: 'ubuntu-latest'
