@@ -6,14 +6,6 @@
 trigger:
 - master
 
-resources:
-  pipelines:
-  - pipeline: componentTest
-    source: pipeline_componentTest
-    trigger:
-     branches:
-     - master 
-
 pool:
   vmImage: 'ubuntu-latest'
 
