@@ -6,6 +6,14 @@
 trigger:
   - none
 
+resources:
+  pipelines:
+  - pipeline: myappbuild  # Name of the pipeline resource
+    source: pipeline_componentTest # Name of the triggering pipeline
+    trigger: 
+      branches:
+      - master
+
 pool:
   vmImage: 'ubuntu-latest'
 
