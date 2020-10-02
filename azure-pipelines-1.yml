@@ -6,6 +6,14 @@
 trigger:
   - master
 
+resources:
+  pipelines:
+  - pipeline: main
+    source: pipeline_main
+    trigger:
+     branches:
+     - master 
+
 pool:
   vmImage: 'ubuntu-latest'
 
