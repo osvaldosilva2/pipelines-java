@@ -8,5 +8,6 @@ public class MyTest {
     public void main_test_method_1() {
         Demo d = new Demo();
         d.DoSomething(true);
+        
     }
 }
