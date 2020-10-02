@@ -6,18 +6,24 @@
 trigger:
   - none
 
-resources:
-  pipelines:
-  - pipeline: main
-    source: pipeline_main
-    trigger:
-     branches:
-     - master 
-
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+- name: one
+  value: initialValue 
+
 steps:
+- script: |
+    echo ${{ variables.one }} # outputs initialValue
+    echo $(one)
+  displayName: First variable pass
+- bash: echo '##vso[task.setvariable variable=one]secondValue'
+  displayName: Set new variable value
+- script: |
+    echo ${{ variables.one }} # outputs initialValue
+    echo $(one) # outputs secondValue
+  displayName: Second variable pass
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
