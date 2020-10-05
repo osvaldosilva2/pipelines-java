@@ -43,7 +43,7 @@ steps:
 #  displayName: 'Create pipeline from script'
 
 - script: az pipelines create --name 'ContosoBuild' --description 'Pipeline for contoso project' --repository https://github.com/osvaldosilva2/pipelines-java --branch master --yml-path /azure-pipelines-2.yml
- displayName: 'Create pipeline from script'
+  displayName: 'Create pipeline from script'
 
 #- script: |
 #    az pipelines build list
