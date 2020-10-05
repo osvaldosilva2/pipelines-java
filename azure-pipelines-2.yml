@@ -36,7 +36,7 @@ steps:
   displayName: 'Login Azure DevOps Extension'
 
 # AZURE_DEVOPS_EXT_GITHUB_PAT.  fvx57aykgb7anmgrs2vwcmu5opomdypdb2jzvxmoeii4kym6pgoa
-- script: az devops configure --defaults organization=https://dev.azure.com/osvaldosilva2 project="pipeline-test" --use-git-aliases true
+- script: az devops configure --defaults organization=https://dev.azure.com/osvaldosilva2 project="pipeline_test" --use-git-aliases true
   displayName: 'Set default Azure DevOps organization and project'
 
 #- script: az login
