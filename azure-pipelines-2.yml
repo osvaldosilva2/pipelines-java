@@ -20,3 +20,32 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- script: az --version
+  displayName: 'Show Azure CLI version'
+
+- script: az extension add -n azure-devops
+  displayName: 'Install Azure DevOps Extension'
+
+- script: az extension show --name azure-devops
+  displayName: 'confirm installation'
+
+- script: echo $(AZURE_DEVOPS_EXT_GITHUB_PAT) | az devops login
+  env:
+    AZURE_DEVOPS_EXT_GITHUB_PAT: $(System.AccessToken)
+  displayName: 'Login Azure DevOps Extension'
+
+# AZURE_DEVOPS_EXT_GITHUB_PAT.  fvx57aykgb7anmgrs2vwcmu5opomdypdb2jzvxmoeii4kym6pgoa
+- script: az devops configure --defaults organization=https://blackbaud.visualstudio.com/ project="Products" --use-git-aliases true
+  displayName: 'Set default Azure DevOps organization and project'
+
+#- script: az login
+#  displayName: 'try login'
+
+#- script: az pipelines create --name 'blackbaud.pipelines-java-component' --description 'Pipeline for pipelines-java test component' --repository blackbaud/pipelines-java --branch master --repository-type github --yml-path /azure-pipelines-component.yml
+#  displayName: 'Create pipeline from script'
+
+- script: |
+    az pipelines build list
+    git pr list
+  displayName: 'Show build list and PRs'
