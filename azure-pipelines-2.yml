@@ -45,7 +45,7 @@ steps:
 - script: az devops service-endpoint list
   displayName: 'endpoints'
 
-- script: az pipelines create --name 'ContosoBuild' --description 'Pipeline for contoso project' --repository https://github.com/osvaldosilva2/pipelines-java --branch master --service-connection 81b713fe-8b6b-448f-9e90-7c02846bd563 --yml-path /azure-pipelines-2.yml
+- script: az pipelines create --name 'ContosoBuild' --description 'Pipeline for contoso project' --repository https://github.com/osvaldosilva2/pipelines-java --branch master --service-connection 81b713fe-8b6b-448f-9e90-7c02846bd563 --yml-path /azure-pipelines.yml
   displayName: 'Create pipeline from script'
 
 #- script: |
@@ -53,5 +53,5 @@ steps:
 #    git pr list
 #  displayName: 'Show build list and PRs'
 
-#- script: git pr list
-#  displayName: 'Show PRs'
+- script: git pr list
+  displayName: 'Show PRs'
