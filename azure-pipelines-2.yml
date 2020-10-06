@@ -42,7 +42,7 @@ steps:
 #- script: az pipelines create --name 'blackbaud.pipelines-java-component' --description 'Pipeline for pipelines-java test component' --repository blackbaud/pipelines-java --branch master --repository-type github --yml-path /azure-pipelines-component.yml
 #  displayName: 'Create pipeline from script'
 
-- script: az devops service-endpoint -h
+- script: az devops service-endpoint list
   displayName: 'endpoints'
 #- script: az pipelines create --name 'ContosoBuild' --description 'Pipeline for contoso project' --repository https://github.com/osvaldosilva2/pipelines-java --branch master --service-connection GitHub --yml-path /azure-pipelines-2.yml
 #  displayName: 'Create pipeline from script'
