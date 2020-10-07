@@ -9,6 +9,18 @@ trigger:
 pr:
   - none
 
+resources:
+  pipelines:
+  - pipeline: buildMain
+    source: pipeline_main
+    trigger: 
+      branches:
+        include: 
+        - feature/*
+        exclude:
+        - master
+        - develop
+
 pool:
   vmImage: 'ubuntu-latest'
 
