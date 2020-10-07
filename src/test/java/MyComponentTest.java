@@ -12,5 +12,6 @@ public class MyComponentTest {
     
     @Test
     public void comp_test_method_2() {
+        assert(1>9);
     }
 }
