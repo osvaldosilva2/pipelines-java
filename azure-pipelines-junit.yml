@@ -7,7 +7,7 @@ trigger:
   - none
 
 pr:
-  - feature/*
+  - none
 
 pool:
   vmImage: 'ubuntu-latest'
