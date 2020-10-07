@@ -6,10 +6,10 @@
 trigger:
   branches:
     include:
+      - develop
       - feature/*
     exclude:
-      - master
-      - develop
+      - master  
 
 pr:
   - feature/*
