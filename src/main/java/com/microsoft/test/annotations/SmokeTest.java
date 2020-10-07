@@ -1,6 +1,5 @@
 package com.microsoft.test.annotations;
 
-public interface SmokeTest {
-  
+public interface SmokeTest {  
   
 }
