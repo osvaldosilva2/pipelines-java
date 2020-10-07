@@ -9,7 +9,6 @@ public class MyComponentTest {
         Demo d = new Demo();
         d.DoSomething(true);
     }
-
     @Test
     public void comp_test_method_2() {
     }
