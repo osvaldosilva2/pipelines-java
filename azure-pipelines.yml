@@ -4,12 +4,12 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-  - none
-#  branches:
-#    include:
-#      - master
-#    exclude:
-#      - feature/*
+  branches:
+    include:
+      - feature/*
+    exclude:
+      - master
+      - develop
 
 pr:
   - feature/*
