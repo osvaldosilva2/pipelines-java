@@ -9,7 +9,6 @@ public class MyTest {
         Demo d = new Demo();        
         d.DoSomething(true); 
         
-        
-        
+                
     }
 }
