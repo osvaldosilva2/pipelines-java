@@ -12,6 +12,7 @@ public class MyUnitTest {
 
     @Test
     public void unit_test_method_2() {
+        assert(1 < 9);
     }
     
     @Test
