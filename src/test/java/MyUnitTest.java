@@ -7,6 +7,7 @@ public class MyUnitTest {
     @Test
     public void unit_test_method_1() {
         Demo d = new Demo();
+        
         d.DoSomething(true);
     }
 
